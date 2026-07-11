@@ -6,7 +6,7 @@ type MyFixtures = {
 };
 
 export const test = base.extend<MyFixtures>({
-  scriptDelay: async ({ page }, use) => {
+  scriptDelay: [async ({ page }, use) => {
     await page.route("**/*", async (route) => {
       if (route.request().resourceType() === "script") {
         await setTimeout(100);
@@ -14,7 +14,7 @@ export const test = base.extend<MyFixtures>({
       await route.continue();
     });
     await use();
-  },
+  }, { auto: true }],
 });
 
 export { expect } from "@playwright/test";

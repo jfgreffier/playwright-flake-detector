@@ -21,6 +21,9 @@
     "outDir": "lib",
     "sourceMap": false,
 
+    /* AND if you're building for a library: */
+    "declaration": true,
+
     /* If your code doesn't run in the DOM: */
     "lib": ["es2022"]
   }

@@ -4,6 +4,8 @@
   "description": "",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "prettier": "prettier --ignore-path .gitignore .",
+    "prettier:fix": "npm run prettier -- --write",
     "test": "echo 'no tests yet' && exit 0"
   },
   "repository": {
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "@types/node": "^24.13.3",
+    "prettier": "^3.9.5",
     "typescript": "^7.0.2"
   }
 }

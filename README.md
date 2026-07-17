@@ -2,6 +2,10 @@
 
 Experimental fixture for Playwright to make flaky tests surface, by creating artificially bad conditions.
 
+This fixture can help you detect:
+
+- hydration issues
+
 ## Usage
 
 ```ts

@@ -7,8 +7,8 @@ type MyFixtures = {
 
 export const test = base.extend<MyFixtures>({
   scriptDelay: [
-    async ({ page }, use) => {
-      await page.route('**/*', async (route) => {
+    async ({ context }, use) => {
+      await context.route('**/*', async (route) => {
         if (route.request().resourceType() === 'script') {
           await setTimeout(100);
         }

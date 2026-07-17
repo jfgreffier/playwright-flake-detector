@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hydration race demo</title>
+  </head>
+  <body>
+    <h1>Flake demos</h1>
+    <p id="status">Static HTML ready</p>
+    <button id="hello-btn">Click me</button>
+
+    <script>
+      // Simulate hydration happening later: load the JS bundle after page load.
+      window.addEventListener('load', () => {
+        const script = document.createElement('script');
+        script.src = './demo.js';
+        document.body.appendChild(script);
+      });
+    </script>
+  </body>
+</html>

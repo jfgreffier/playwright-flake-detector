@@ -19,3 +19,15 @@ test('example', async ({ page }) => {
 ## Contribute
 
 I don't accept contributions for now
+
+Run tests
+
+```bash
+npx playwright test
+```
+
+Test burn in
+
+```bash
+npx playwright test --repeat-each=10
+```

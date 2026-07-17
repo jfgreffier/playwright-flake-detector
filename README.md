@@ -1,11 +1,11 @@
-# Playwright Flaky Detector
+# Playwright flake detector
 
-Experimental fixture to make flaky Playwright surface, by creating artificially bad conditions.
+Experimental fixture for Playwright to make flaky tests surface, by creating artificially bad conditions.
 
 ## Usage
 
 ```ts
-import { test, expect } from 'playwright-flaky-detector';
+import { test, expect } from 'playwright-flake-detector';
 
 test('example', async ({ page }) => {
   // ...

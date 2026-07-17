@@ -1,5 +1,5 @@
 {
-  "name": "playwright-flaky-detector",
+  "name": "playwright-flake-detector",
   "version": "0.0.4",
   "description": "",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jfgreffier/playwright-flaky-detector.git"
+    "url": "git+https://github.com/jfgreffier/playwright-flake-detector.git"
   },
   "keywords": [],
   "author": "jfgreffier",

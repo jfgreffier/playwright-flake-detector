@@ -5,6 +5,8 @@ Experimental fixture for Playwright to make flaky tests surface, by creating art
 This fixture can help you detect:
 
 - hydration issues
+- missing await on action and web-first assertions
+- explicit wait with `waitForTimeout`
 
 ## Usage
 

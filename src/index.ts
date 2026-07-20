@@ -1,8 +1,10 @@
 import { test as base } from '@playwright/test';
 import { setTimeout } from 'node:timers/promises';
+import { lintFile } from './lint';
 
 type MyFixtures = {
   scriptDelay: void;
+  lint: void;
 };
 
 export const test = base.extend<MyFixtures>({
@@ -14,6 +16,22 @@ export const test = base.extend<MyFixtures>({
         }
         await route.continue();
       });
+
+      await use();
+    },
+    { auto: true },
+  ],
+  lint: [
+    async ({}, use, testInfo) => {
+      const {errorCount, resultText} = await lintFile(testInfo.file);
+      if (errorCount > 0) {
+        testInfo.status = 'failed';
+        testInfo.errors.push({
+          message: `Should not have lint error\n${resultText}`,
+          errorContext: resultText,
+        });
+      }
+      
       await use();
     },
     { auto: true },
@@ -21,3 +39,4 @@ export const test = base.extend<MyFixtures>({
 });
 
 export { expect } from '@playwright/test';
+

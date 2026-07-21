@@ -1,5 +1,7 @@
 # Playwright flake detector
 
+[![NPM Version](https://img.shields.io/npm/v/playwright-flake-detector)](https://www.npmjs.com/package/playwright-flake-detector)
+
 Experimental fixture for Playwright to make flaky tests surface, by creating artificially bad conditions.
 
 This fixture can help you detect:

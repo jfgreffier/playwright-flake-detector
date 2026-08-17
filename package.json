@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/jfgreffier/playwright-flake-detector.git"
   },
-  "keywords": [],
+  "keywords": [
+    "e2e",
+    "playwright",
+    "testing"
+  ],
   "author": "jfgreffier",
   "license": "MIT",
   "main": "./lib/index.js",

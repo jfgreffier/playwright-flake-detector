@@ -20,7 +20,7 @@ test('example', async ({ page }) => {
 });
 ```
 
-## Contribute
+## Contributing
 
 I don't accept contributions for now
 

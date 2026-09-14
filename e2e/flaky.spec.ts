@@ -1,5 +1,11 @@
 import { test, expect } from '../src/index';
 
+test.use({
+  flakeDetectorOptions: {
+    lint: false,
+  },
+});
+
 // This test fails when Playwright is faster than hydration
 test('broken hydration: click is lost', async ({ page }) => {
   await page.goto('http://localhost:3000/');

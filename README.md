@@ -24,6 +24,15 @@ test('example', async ({ page }) => {
 });
 ```
 
+```ts
+test.use({
+  flakeDetectorOptions: {
+    lint: false,
+    scriptDelay: 1_000,
+  },
+});
+```
+
 ## Contributing
 
 I don't accept contributions for now, but I would love feedback. Don't hesite to reach out, or to create issues.

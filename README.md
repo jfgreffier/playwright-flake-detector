@@ -10,7 +10,11 @@ This fixture can help you detect:
 - missing await on action and web-first assertions
 - explicit wait with `waitForTimeout`
 
-## Usage
+## Getting started
+
+```bash
+npm install --save-dev playwright-flake-detector
+```
 
 ```ts
 import { test, expect } from 'playwright-flake-detector';
@@ -22,11 +26,12 @@ test('example', async ({ page }) => {
 
 ## Contributing
 
-I don't accept contributions for now
+I don't accept contributions for now, but I would love feedback. Don't hesite to reach out, or to create issues.
 
 Run tests
 
 ```bash
+serve demo/
 npx playwright test
 ```
 

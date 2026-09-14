@@ -37,6 +37,7 @@ npx playwright test --repeat-each=10
 ```
 
 npm publication is performed in CI. np is quite useful for everything else (bumping version, perform checks, prepare the release).
+
 ```bash
 npx np --no-publish
 ```

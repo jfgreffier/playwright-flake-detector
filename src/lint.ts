@@ -1,7 +1,9 @@
 import { ESLint } from 'eslint';
 import playwright from 'eslint-plugin-playwright';
 
-export async function lintFile(filePath: string): Promise<{ errorCount: number; resultText: string}> {
+export async function lintFile(
+  filePath: string,
+): Promise<{ errorCount: number; resultText: string }> {
   const eslint = new ESLint({
     overrideConfigFile: true,
     overrideConfig: [
@@ -16,9 +18,9 @@ export async function lintFile(filePath: string): Promise<{ errorCount: number; 
     ],
   });
   const results = await eslint.lintFiles([filePath]);
-  const errorCount = results[0] ? results[0].errorCount : 0
+  const errorCount = results[0] ? results[0].errorCount : 0;
   const formatter = await eslint.loadFormatter('stylish');
   const resultText = await formatter.format(results);
 
-  return { errorCount , resultText };
+  return { errorCount, resultText };
 }

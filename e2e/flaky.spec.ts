@@ -9,7 +9,7 @@ test('broken hydration: click is lost', async ({ page }) => {
   await expect(page.getByText('success')).toBeVisible();
 });
 
-// This test randomly fails depending on the excecution environment
+// This test randomly fails depending on the execution environment
 test('no await', async ({ page }) => {
   await page.goto('http://localhost:3000/');
 
